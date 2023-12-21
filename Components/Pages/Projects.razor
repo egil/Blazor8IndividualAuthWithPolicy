@@ -1,0 +1,12 @@
+﻿@attribute [Authorize(Policy = "TestPolicy")]
+@page "/{CompanyId}/project/{ProjectId:int}"
+<h3>Projects</h3>
+<p>@CompanyId</p>
+<p>@ProjectId</p>
+@code {
+    [Parameter]
+    public string? CompanyId { get; set; }
+
+    [Parameter]
+    public int ProjectId { get; set; }
+}
